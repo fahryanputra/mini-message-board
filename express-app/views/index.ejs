@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Messageboard</title>
-</head>
-<body>
-  <H1> <%= title %> </H1>
-  <ul>
-    <% messages.map((message) => { %>
-    <li><%= message.user %>: <%= message.text %></li>
-    <% }) %>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Messageboard</title>
+  </head>
+  <body>
+    <H1> <%= title %> </H1>
+    <ul>
+      <% messages.map((message) => { %>
+      <li>
+        <%= message.user %>: <%= message.text %>
+        <button onclick="goToMsg(<%= message.id %>)">open</button>
+      </li>
+      <% }) %>
+    </ul>
+  </body>
 </html>
+<script>
+  function goToMsg(id) {
+    window.location.href = `/message/${id}`;
+  }
+</script>
