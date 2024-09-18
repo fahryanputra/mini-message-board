@@ -6,6 +6,7 @@
     <title>Message</title>
   </head>
   <body>
+    <%- include('navbar', {links: links}) %>
     <h1>Message</h1>
     <p>User: <%= message.user %></p>
     <p>Message: <%= message.text %></p>

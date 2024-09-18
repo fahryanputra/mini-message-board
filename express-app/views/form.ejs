@@ -6,6 +6,7 @@
     <title>New Message</title>
   </head>
   <body>
+    <%- include('navbar', {links: links}) %>
     <h1>New Message</h1>
     <form method="POST" action="/new">
       <label for="user">Name</label>

@@ -1,10 +1,11 @@
 const { Router } = require("express");
 const messages = require("../data/messages");
+const links = require("../data/links");
 
 const messageRouter = Router();
 
 // New message routes
-messageRouter.get("/", (req, res) => res.render("form"));
+messageRouter.get("/", (req, res) => res.render("form", { links: links }));
 messageRouter.post("/", (req, res) => {
   const { userText, messageText } = req.body;
   messages.push({

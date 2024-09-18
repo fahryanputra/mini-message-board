@@ -6,7 +6,8 @@
     <title>Messageboard</title>
   </head>
   <body>
-    <H1> <%= title %> </H1>
+    <%- include('navbar', {links: links}) %>
+    <h1><%= title %></h1>
     <ul>
       <% messages.map((message) => { %>
       <li>
