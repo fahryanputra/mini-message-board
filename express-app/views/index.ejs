@@ -1,0 +1,13 @@
+<html>
+  <head>
+    <title>Mini Messageboard</title>
+  </head>
+  <body>
+    <H1> <%= title %> </H1>
+    <ul>
+      <% messages.map((message) => { %>
+      <li><%= message.user %>: <%= message.text %></li>
+      <% }) %>
+    </ul>
+  </body>
+</html>
